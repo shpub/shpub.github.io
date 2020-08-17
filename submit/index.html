@@ -61,8 +61,13 @@
       </b>
     </p>
   <p>Submit to Shuzhou<br>
-    <input type="submit" value="Submit via Google Forms" onclick="window.location.href='https://forms.gle/qzjyDsWG4WZfYVR69'"/>
-    <input type="submit" value="Submit via ShuMail" onclick="window.location.href='https://shumail.github.io/services/submit.htm?org=shpub'" disabled = "disabled"/>
+    <input type="submit" value="Submit via Google Forms" onclick="window.location.href='https://forms.gle/qzjyDsWG4WZfYVR69'" class="shuzhou"/>
+    <input type="submit" value="Submit via ShuMail" onclick="window.location.href='https://shumail.github.io/services/submit.htm?org=shpub'" disabled = "disabled" class="shuzhou"/>
+    <shumail disabled="error:http(404)" href="error:http(404)">
+      <a href="#error" onclick="alert('Error: ShuMail Error\nError Code: error:http(404)\nThe server has not been built YET!');">
+        Why can't I submit by ShuMail?
+      </a>
+    </shumail>
   <footer>
     <p>The current time is <div id="shutime"></div><br>
     &copy;2020 Shuzhou Foundation. All rights reserved.<br>
