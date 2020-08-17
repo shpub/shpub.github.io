@@ -2,8 +2,71 @@
 <html>
 <head>
   <title>Submit - Shuzhou Publishing House</title>
+  <script>
+    function startTime(){
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        // add a zero in front of numbers<10
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById('shutime').innerHTML=h+":"+ m +":"+s;
+        t=setTimeout('startTime()',500);
+    }
+        function checkTime(i){
+          if (i<10){
+            i="0" + i;
+           }
+          return i;
+        }
+  </script>
+  <style>
+    .shuzhou{
+     font-family:"Product Sans"; 
+    }
+  </style>
 </head>
-<body>
-
+<body class="shuzhou" onload="startTime()">
+  <p>
+      Shuzhou Publishing House<br>
+      <b>
+      <a href="#" onclick="window.location.href='https://shpub.github.io'">
+          Home
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" onclick="window.location.href='https://shpub.github.io/science'">
+          Science
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" onclick="window.location.href='https://shpub.github.io/communications'">
+          Communications
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" onclick="window.location.href='https://shpub.github.io/medicine'">
+          Medicine
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" onclick="window.location.href='https://shpub.github.io/science'">
+          Biology
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" onclick="window.location.href='https://shpub.github.io/physics'">
+          Physics
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" onclick="window.location.href='https://shpub.github.io/astronomy'">
+          Astronomy
+      </a>
+      </b>
+    </p>
+  <p>Submit to Shuzhou<br>
+    <input type="submit" value="Submit via Google Forms" onclick="window.location.href='https://forms.gle/qzjyDsWG4WZfYVR69'"/>
+    <input type="submit" value="Submit via ShuMail" onclick="window.location.href='https://shumail.github.io/services/submit.htm?org=shpub'" disabled = "disabled"/>
+  <footer>
+    <p>The current time is <div id="shutime"></div><br>
+    &copy;2020 Shuzhou Foundation. All rights reserved.<br>
+    &copy;2020 Shuzhou Publishing House. All rights reserved.
+  </footer>
 </body>
 </html>
